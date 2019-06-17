@@ -28,7 +28,7 @@ Dredd
 
 Aglio para geração da documentação em HTML ou Subindo um no localhost
 
-````aglio -i api.apib  -o api-doc.html````
+````aglio -i api.apib  -o build/api-doc.html````
 
 Ou
 
