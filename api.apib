@@ -1,8 +1,59 @@
 FORMAT: 1A
+HOST: http://localhost:4000
 
 # Modulo Produtos
 
 
 # Group Usuario
 
+## Usuario [/usuario]
+Controle dos usuários
+
+### Create [POST]
++ Request (application/json)
+
+    + Attributes (Usuario)
+
++ Response 200 (application/json; charset=utf-8)
+    + Attributes (UsuarioCreated)
+
+### List [GET]
++ Response 200 (application/json; charset=utf-8)
+    + Attributes (array[Usuario])
+
+## Usuario [/usuario/{id}]
++ Parameters
+    + id: 1 (number) - Id do Usuário
+
+### View [GET]
++ Response 200 (application/json; charset=utf-8)
+    + Attributes (Usuario)
+
+### Edit [PUT]
++ Request (application/json)
+    + Attributes (Usuario)
+
++ Response 200 (application/json; charset=utf-8)
+    + Attributes (UsuarioCreated)
+
+### Delete [DELETE]
+
++ Response 200 (application/json; charset=utf-8)
+    + Attributes (DeletadoComSucesso)
+    
 # Group Produto
+
+# Data Structures
+
+## Usuario (object)
++ login: username (string)
++ senha: 123 (string)
+
+## UsuarioCreate (Usuario)
++ id: 1 (number)
+
+## UsuarioCreated (object)
++ id: 1 (number)
+
+## DeletadoComSucesso (object)
++ mensage: Deletado com sucesso (string)
